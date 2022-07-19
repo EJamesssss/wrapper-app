@@ -4,8 +4,7 @@ class SearchKeywordsController < ApplicationController
 
   def show
     client = Genius::Api::Client.new
-    @results = client.genius_search(params[:id])
+    @results = client.artist_search(params[:id])
   end
 
-  private
 end

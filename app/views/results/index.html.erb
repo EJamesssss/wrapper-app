@@ -1,0 +1,5 @@
+<h1>Genius</h1>
+
+<% @results["response"]["hits"].each do |result|%>
+<p><%= result["result"]["title"]%> - <%= link_to result["result"]["primary_artist"]["name"], search_keyword_path(result["result"]["primary_artist"]["id"])%> </p>
+<%end%>

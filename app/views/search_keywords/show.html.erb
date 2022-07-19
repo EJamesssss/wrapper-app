@@ -1,5 +1,5 @@
-<h1>Genius</h1>
-
-<% @results["response"]["hits"].each do |result|%>
-<p><%= result["result"]["title"]%> - <%= result["result"]["primary_artist"]["name"]%> </p>
+<%@results["response"]["artist"]["description"]["dom"]["children"].each do |result|%>
+<%if result = !nil%>
+<p><%= result["children"][0]%></p>
+<%end%>
 <%end%>
