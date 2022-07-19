@@ -1,13 +1,13 @@
 require "test_helper"
 
-class NutritionInfosControllerTest < ActionDispatch::IntegrationTest
+class SearchKeywordsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get nutrition_infos_index_url
+    get search_keywords_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get nutrition_infos_show_url
+    get search_keywords_show_url
     assert_response :success
   end
 end

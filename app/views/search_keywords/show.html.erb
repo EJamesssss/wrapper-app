@@ -1,0 +1,5 @@
+<h1>Genius</h1>
+
+<% @results["response"]["hits"].each do |result|%>
+<p><%= result["result"]["title"]%> - <%= result["result"]["primary_artist"]["name"]%> </p>
+<%end%>
