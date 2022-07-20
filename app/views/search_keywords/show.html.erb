@@ -1,5 +1,13 @@
-<%@results["response"]["artist"]["description"]["dom"]["children"].each do |result|%>
-<%if result = !nil%>
-<p><%= result["children"][0]%></p>
-<%end%>
-<%end%>
+<div class="profile">
+    <img src=<%= @results["response"]["artist"]["image_url"]%> style="width:10em;height:10em">
+    <h2><%= @results["response"]["artist"]["name"]%></h2>
+</div>
+<div class="social-media">
+    <h3>Facebook: <a href="https://www.facebook.com/<%= @results["response"]["artist"]["facebook_name"]%>"><%= @results["response"]["artist"]["facebook_name"]%></a></h3>
+    <h3>Instagram: <a href="https://www.instagram.com/<%= @results["response"]["artist"]["instagram_name"]%>"><%= @results["response"]["artist"]["instagram_name"]%></a></h3>
+</div>
+<div class="songs">
+    <% @songs["response"]["songs"].each do |song|%>
+    <p><%= link_to song["title"], song_path(song["id"])%></p>
+    <%end%>
+</div>
