@@ -10,7 +10,12 @@
                 <tbody>
                     <% @results["response"]["hits"].each do |result|%>
                     <tr>
-                        <td><%= link_to result["result"]["title"], song_path(result["result"]["id"])%> - <%= link_to result["result"]["primary_artist"]["name"], search_keyword_path(result["result"]["primary_artist"]["id"])%> </td>
+                        <td><%= link_to result["result"]["title"], song_path(result["result"]["id"])%> - <%= link_to result["result"]["primary_artist"]["name"], search_keyword_path(result["result"]["primary_artist"]["id"])%>
+                        <%if result["result"]["featured_artists"].length > 0%>
+                        ft. <%result["result"]["featured_artists"].each do |ft|%>
+                        <%= link_to ft["name"], search_keyword_path(ft["id"])%>
+                        <%end%>
+                        <%end%> </td>
                     </tr>
                     <%end%>
                 </tbody>

@@ -25,7 +25,16 @@
                     <tbody>
                         <% @songs["response"]["songs"].each do |song|%>
                             <tr>
-                                <td><%= link_to song["title"], song_path(song["id"])%></td>
+                                <td><%= link_to song["title"], song_path(song["id"])%>
+                                <% if song["featured_artists"].length > 0%>
+                                ft <% song["featured_artists"].each do |featuring|%>
+                                <% if featuring["name"] == @results["response"]["artist"]["name"] %>
+                                <%= link_to song["primary_artist"]["name"], search_keyword_path(song["primary_artist"]["id"])%>
+                                <%else%>
+                                <%= link_to featuring["name"], search_keyword_path(featuring["id"])%>
+                                <%end%>
+                                <%end%>
+                                <%end%></td>
                             </tr>
                         <%end%>
                     </tbody>

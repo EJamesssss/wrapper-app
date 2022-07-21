@@ -1,9 +1,19 @@
 <div class="container text-center">
     <div class="table-box white">
         <h1><%= @songs["response"]["song"]["title"]%> - <%= @songs["response"]["song"]["primary_artist"]["name"]%></h1>
-        <div>
-            <iframe width="800" height="500" src="https://www.youtube.com/embed/<%= @songs["response"]["song"]["media"][0]["url"][-11..-1]%>?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        <%if @songs["response"]["song"]["media"].length > 1%>
+            <%@songs["response"]["song"]["media"].each do |yt|%>
+                <% if yt["provider"] == "youtube"%>
+                    <div>
+                        <iframe width="800" height="500" src="https://www.youtube.com/embed/<%= yt["url"][-11..-1]%>?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <%end%>
+            <%end%>
+        <%else%>
+            <div>
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/<%= @songs["response"]["song"]["media"][0]["url"][-11..-1]%>?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        <%end%>
         <div><%== @songs["response"]["song"]["embed_content"]%></div>
     </div>
 </div>
