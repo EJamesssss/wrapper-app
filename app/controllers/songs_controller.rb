@@ -3,4 +3,5 @@ class SongsController < ApplicationController
     client = Genius::Api::Client.new
     @songs = client.song_search(params[:id])
   end
+
 end

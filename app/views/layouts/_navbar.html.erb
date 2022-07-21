@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg fixed-top bg-dark">
+    
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><%= image_tag "logo.png", height: 50 %></a>
+        <%= form_with url: results_path, method: :get, html: {class: "d-flex"} do |form| %>
+            <!-- <%= form.label :id, "Search for:" %> -->
+            <%= form.text_field :id, class: "form-control me-2", placeholder:"Search for" %>
+            <%= form.submit "Search", class:"btn btn-dark" %>
+        <% end %>
+    </div>
+</nav>

@@ -1,15 +1,102 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+    box-sizing: border-box;}
+  
+html {
+  height: 100%;}
+
+body {
+  background-color: #dee2e6;
+  color: #7e8ba3;
+  font: 300 1rem/1.5 Helvetica Neue, sans-serif;
+  margin: 0;
+  min-height: 100%;}
+
+input {
+  border: 0;
+  font: inherit;}
+
+.form input {
+  outline: 0;
+  padding: 0.5rem 1rem;}
+
+.grid {
+  margin: 0 auto;
+  max-width: 25rem;
+  width: 100%;}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 0 1rem;
+  text-transform: uppercase;}
+
+h4 {
+  font-weight: bold;}
+
+svg {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;}
+
+a {
+  color: #7e8ba3;}
+
+.center {
+  text-align: center;}
+
+.margin {
+  margin: 0 10rem;}
+
+.card {
+  background-color: #354152;
+  border: 2px solid #7e8ba3;}
+
+.form-control {
+  background-color: #dee2e6;}
+
+.table-box {
+  border: solid 1px #b3b3b3;
+  margin-top: 6rem;
+  padding: 2rem 2rem 0 2rem;
+  border-radius: 1rem;}
+
+.table {
+  color: #7e8ba3;}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  color: #e1e4ea !important;}
+
+.col-sm-13 {
+  margin-top: 1rem;}
+
+.card-header {
+  background-color: #354152;
+  border: none !important ;}
+
+.card-title {
+  font-weight: 600;}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;}
+
+.card-body {
+  margin: 2rem;}
+
+.white {
+  background-color: #FFF}
+
+a:link {
+  text-decoration: none;}
+
+.navbar-brand{
+  color: #f1f1f1;}
+
+.profile > h2{
+  font-weight: bold;
+  margin-top: 1rem;}
+  
+.bg-dark {
+ background-color: #5f6d86 !important;}
+
