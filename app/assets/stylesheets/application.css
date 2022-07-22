@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
 * {
     box-sizing: border-box;}
   
@@ -48,8 +50,11 @@ a {
   margin: 0 10rem;}
 
 .card {
-  background-color: #354152;
-  border: 2px solid #7e8ba3;}
+  margin-top: 6rem;
+  border: 1px solid #b3b3b3;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;}
 
 .form-control {
   background-color: #dee2e6;}
@@ -68,6 +73,9 @@ a {
 
 .col-sm-13 {
   margin-top: 1rem;}
+
+.utube {
+  margin-top: 1.5rem;}
 
 .card-header {
   background-color: #354152;
@@ -99,4 +107,9 @@ a:link {
   
 .bg-dark {
  background-color: #5f6d86 !important;}
+
+.myfont {
+  font-family: 'Rampart One', cursive;
+  font-size: 30px;
+}
 
